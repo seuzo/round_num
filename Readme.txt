@@ -1,7 +1,7 @@
 ソフト名：round_num
 ライセンス：GNU GPLv3
 　　作者：市川せうぞー／(c)2008-2009 Seuzo Ichikawa
-動作環境：MacOS X10.5.7、InDesign CS4_J（6.0.2）
+動作環境：MacOS X10.6.8、InDesign CS5（7.0.4）
 開発環境：Mac Pro Quad 3GHz（Intel）、ExtendScript Toolkit
 開発言語：JavaScript
 圧縮方法：zip
@@ -20,6 +20,7 @@
 -括弧内数字にする
 http://www.youtube.com/watch?v=dcYfoKgSdmc
 
+
 **同梱ファイル（2Files）
 Readme.txt	このファイルです。とにかく最初によんでください。
 round_num.jsx	スクリプト本体です。
@@ -27,13 +28,13 @@ round_num.jsx	スクリプト本体です。
 
 **使用条件
 このスクリプトが正常に動作する環境は以下の通りです。Windows環境でも動作する可能性がありますが未検証です。
--MacOS X10.5.7
--InDesign CS4_J（6.0.2）
+-MacOS X10.6.8
+-InDesign CS5（7.0.4）
 
 
 **インストール
 スクリプト本体（round_num.jsx）を
-~/Library/Preferences/Adobe InDesign/Version 6.0-J/ja_JP/Scripts/Scripts Panel/
+~/Library/Preferences/Adobe InDesign/Version 7.0-J/ja_JP/Scripts/Scripts Panel/
 にコピーしてください。エイリアスを入れておくだけでもかまいません。
 スクリプトパレットから使用します。
 
@@ -49,8 +50,6 @@ round_num.jsx	スクリプト本体です。
 OTFでGIDが同じ値を持つフォントしか置換しません。例えば、Osakaフォント（TrueType）には「①」「❶」などの字形を持ちますが、数字の「1」のCID/GIDは「18」ではなく、「47」なので置換対象になりません。
 変換できる数字は「0」〜「100」までと「00」〜「09」までです。これ以上の大きな数は無視されます。
 数字列中に「,」（カンマ）や「.」（ピリオド）を含む数字列は変換しません。「1.0」は「1」と解釈しません。位取りのカンマでないとしても「1,2,3」という数字列は無視します。どうしても置換したい場合は、それぞれ数字のみを選択して実行してください。
-表組みはサポートしておりません。
-合成フォントはサポートしておりません。InDesignの字形置換の仕様です。
 
 
 **免責事項
@@ -68,7 +67,7 @@ http://sourceforge.jp/projects/opensource/wiki/licenses%252FGNU_General_Public_L
 2008-09-19	ver.0.1	とりあえず
 2008-09-20	ver.0.2	2桁以上の選択文字がストーリーの最後にある時、処理が失敗するのを修正した。文字列「111」の最初の「11」を選択しているとき、「⑪⑪」などと変換されてしまうのを修正した。http://d.hatena.ne.jp/seuzo/20080919/1221832112
 2009-05-26	ver.0.3	InDesign CS4対応版。選択しているテキストが数字だけでなく、他の文字列を選択していても、選択文字列中の数字列を変換できるようにした。http://d.hatena.ne.jp/seuzo/20090527/1243353039
-
+2011-06-24  ver.0.4 合成フォントの対応について、milligrammeさんに修正していただきました。 https://github.com/milligramme/round_num/commit/92dc8fdfe7662d386fc928ab8e4ef0316ef2af4d ありがとうございます。合成フォントを選択している時は、フォントを漢字フォントに変更します。InDesign CS5にて動作確認。表組みやセルを選択していても置換できるようにした。
 
 
 市川せうぞー
